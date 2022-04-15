@@ -73,15 +73,19 @@ remake_all_slides() {
 	done
 }
 
+remake_changed_slides() {
 
-find_slides_usage "Intro_to_programming"
+	find_slides_usage "Intro_to_programming"
 
 
-for case in "${found[@]}"
-do
-	stringarray=($case)
-	remake_slides ${stringarray[0]} ${stringarray[1]}
-done
+	for case in "${found[@]}"
+	do
+		stringarray=($case)
+		remake_slides ${stringarray[0]} ${stringarray[1]}
+	done
+}
+
+remake_all_slides
 
 
 
