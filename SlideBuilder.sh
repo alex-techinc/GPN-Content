@@ -74,7 +74,7 @@ remake_all_slides() {
 }
 
 
-find_slides_usage "Intro to programming"
+find_slides_usage "Intro_to_programming"
 
 
 for case in "${found[@]}"
