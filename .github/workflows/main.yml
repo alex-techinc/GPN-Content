@@ -30,20 +30,18 @@ jobs:
         
       - name: Give script permission
         run: chmod +x ./SlideBuilder.sh
-
-      # Runs a single command using the runners shell
-      - name: Run some checks
-        run: |
-          pwd
-          ls
-          cd Master_Slides
-          ls
         
       - name: Run Slide Builder
         run: ./SlideBuilder.sh
 
-#       # Runs a set of commands using the runners shell
-#       - name: Run a multi-line script
-#         run: |
-#           echo Add other actions to build,
-#           echo test, and deploy your project.
+      - name: Commit files
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "Update Slides" -a
+    
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
