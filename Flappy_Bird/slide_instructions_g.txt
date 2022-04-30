@@ -1,6 +1,6 @@
 Intro_to_programming
 Intro_to_python
 Intro_to_pygame
-If_Statements
+If_statements
 Pygame_events
 Pygame_collisions
