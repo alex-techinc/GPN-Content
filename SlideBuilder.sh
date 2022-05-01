@@ -25,7 +25,7 @@ remake_slides () {
 				cp Master_Slides/"$line".pdf "$project"
 
 				#We merge those PDFs together into a new_slides PDF, which we then rename and delete (I haven't found a way to merge in place)
-			  	gs -dNOPAUSE -sDEVICE=pdfwrite -sOUTPUTFILE="$project"/new_slides_"$level".pdf -dBATCH "$project"/slides_"$level".pdf "$project"/"$line".pdf
+			  	gs -dQUIET -dNOPAUSE -sDEVICE=pdfwrite -sOUTPUTFILE="$project"/new_slides_"$level".pdf -dBATCH "$project"/slides_"$level".pdf "$project"/"$line".pdf
 			  	mv "$project"/new_slides_"$level".pdf "$project"/slides_"$level".pdf
 
 			  	#We then delete the slide deck that we just merged in, leaving only the fully combined slides

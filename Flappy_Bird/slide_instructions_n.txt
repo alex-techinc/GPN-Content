@@ -1,6 +1,8 @@
-Intro_to_programming
-Intro_to_python
 Intro_to_pygame
-If_Statements
 Pygame_events
 Pygame_collisions
+Random
+Classes
+Classes_arguments_and_returns
+Lists
+Files
